@@ -1,6 +1,16 @@
 # worldcapitals
 Creates updated database of world capital locations for Celestia.
 
+## License
+Copyright (C) 2020  LukeCEL
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+
 ## About
 The official development of Celestia stopped in 2011, and has only recently picked up. Since then, most of the catalogs have since become outdated. This script creates worldcapitals.ssc, a file intended to replace world-capitals.ssc. The old file uses [APPENDIX-f of the CIA Factbook 2003](https://web.archive.org/web/20030205084318/http://www.odci.gov/cia/publications/factbook/appendix/appendix-f.html), supplemented by the [Getty Thesaurus](http://www.getty.edu/research/conducting_research/vocabularies/tgn/index.html). This one mainly uses the [UN's Excel spreadsheet of capital city populations, 2018 revision](https://population.un.org/wup/Download/).
 
