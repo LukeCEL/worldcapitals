@@ -41,4 +41,4 @@ The Perl script should automatically create an SSC file called `worldcapitals.ss
 ## Acknowledgements
 This code primarily makes use of this source: [United Nations, Department of Economic and Social Affairs, Population Division (2018). World Urbanization Prospects: The 2018 Revision, Online Edition; File 13: Population of Capital Cities in 2018 (thousands)](https://population.un.org/wup/Download/). It is copyright © 2018 by United Nations and is licensed under [CC BY 3.0 IGO](https://creativecommons.org/licenses/by/3.0/igo/).
 
-Thank you to Chris Laurel and everyone who helped make Celestia great in the first place.
+Thank you to Chris Laurel and everyone who helped make Celestia great in the first place. In addition, thank you to Fridger Schrempp for providing the original world-capitals.ssc file.
