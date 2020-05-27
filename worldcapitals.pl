@@ -99,7 +99,9 @@ print SSC_PATH "# This catalogue was made using a Perl script, worldcapitals.pl.
 print SSC_PATH "# values were calculated by taking the cube root of the population (in\n";
 print SSC_PATH "# thousands), and multiplying by 15. The list is more or less accurate as of\n";
 print SSC_PATH "# 2018, although a few capitals are missing or outdated. The population of\n";
-print SSC_PATH "# Tokelau is not listed in the file; it has been taken from the 2016 census.";
+print SSC_PATH "# Tokelau is not listed in the file; it has been taken from the 2016 census.\n";
+print SSC_PATH "# Names for a few capitals have been fixed to include more correct names or\n";
+print SSC_PATH "# more common spelling variations.";
 
 foreach my $index (sort { $capitals{$a}->{'name'} cmp $capitals{$b}->{'name'} } keys %capitals)
 {
