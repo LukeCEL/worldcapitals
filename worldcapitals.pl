@@ -38,11 +38,26 @@ for (my $i = 17; $i <= $rowrange; $i++)
         'importance' => '',
     };
 }
+# ==================================== HANDLE EXCEPTIONS ====================================
 
-# TODO: Tokelau has no population value listed.
+# Tokelau has no population value listed.
 # We use its final population count from the 2016 census: 1,499
 # https://www.tokelau.org.nz/site/tokelau/files/TokelauNSO/2016Census/TokelauCensusTechnicalRelease1E.pdf
 $capitals{217}{'population'} = 1.499;
+
+# Fix names for a few capitals
+$capitals{20}{'name'}  = 'Brussels';
+$capitals{39}{'name'}  = 'Ottawa';
+$capitals{50}{'name'}  = 'Taipei';
+$capitals{54}{'name'}  = 'Avarua';
+$capitals{90}{'name'}  = 'Nuuk';
+$capitals{147}{'name'} = 'Naypyidaw';
+$capitals{149}{'name'} = 'Yaren District';
+$capitals{174}{'name'} = 'Chisinau';
+$capitals{236}{'name'} = 'Hanoi';
+$capitals{237}{'name'} = 'Mata-Utu';
+$capitals{238}{'name'} = 'Laayoune';
+$capitals{239}{'name'} = 'Sanaa';
 
 # clean data
 foreach my $index (sort keys %capitals)
