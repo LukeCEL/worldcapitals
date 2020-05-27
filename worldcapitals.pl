@@ -38,8 +38,8 @@ for (my $i = 17; $i <= $rowrange; $i++)
         'importance' => '',
     };
 }
-# ==================================== HANDLE EXCEPTIONS ====================================
 
+# ==================================== HANDLE EXCEPTIONS ====================================
 # Tokelau has no population value listed.
 # We use its final population count from the 2016 census: 1,499
 # https://www.tokelau.org.nz/site/tokelau/files/TokelauNSO/2016Census/TokelauCensusTechnicalRelease1E.pdf
@@ -59,7 +59,7 @@ $capitals{237}{'name'} = 'Mata-Utu';
 $capitals{238}{'name'} = 'Laayoune';
 $capitals{239}{'name'} = 'Sanaa';
 
-# clean data
+# ======================================= PROCESS DATA =======================================
 foreach my $index (sort keys %capitals)
 {
     # POPULATION:
@@ -72,6 +72,7 @@ foreach my $index (sort keys %capitals)
     my $name = $capitals{$index}{'name'};
     $name = unidecode($name);
     
+    # Standardize "St." spelling to spell out the word "Saint"
     $name =~ s/St\.\s?/Saint /;
     
     # Use English-language names (usually held inside the parentheses)
@@ -79,10 +80,10 @@ foreach my $index (sort keys %capitals)
         $capitals{$index}{'name'} = $2;
     } else {
         $capitals{$index}{'name'} = $name;
-
     }
 }
 
+# ==================================== OUTPUT SSC FILE ====================================
 local(*SSC_PATH);
 open(SSC_PATH, '>', $output) or die "ERROR: Could not write to $output\n";
 
