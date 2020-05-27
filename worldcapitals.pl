@@ -6,14 +6,14 @@ use Spreadsheet::ParseExcel;
 use Text::Unidecode;
 
 my %capitals = (); # capitals will be stored in this hash
+my $output = 'worldcapitals.ssc';
 
+# ======================================== READ DATA ========================================
 my $parser    = Spreadsheet::ParseExcel->new();
 my $workbook  = $parser->parse('WUP2018-F13-Capital_Cities.xls');
 my $worksheet = $workbook->worksheet('Data');
 
-my $output = 'worldcapitals.ssc';
-
-if ( !defined $workbook ) {
+if (!defined $workbook) {
     die $parser->error(), ".\n";
 }
 
@@ -24,16 +24,11 @@ my $rowrange = $worksheet->row_range();
 for (my $i = 17; $i <= $rowrange; $i++)
 {
     # Extract data
-    my $index = $worksheet->get_cell($i, 0)->unformatted();
-    # print "$index ";
-    my $capital = $worksheet->get_cell($i, 3)->unformatted();
-    # print "$capital ";
-    my $lat = $worksheet->get_cell($i, 7)->unformatted();
-    # print "$lat ";
-    my $long = $worksheet->get_cell($i, 8)->unformatted();
-    # print "$long ";
+    my $index      = $worksheet->get_cell($i, 0)->unformatted();
+    my $capital    = $worksheet->get_cell($i, 3)->unformatted();
+    my $lat        = $worksheet->get_cell($i, 7)->unformatted();
+    my $long       = $worksheet->get_cell($i, 8)->unformatted();
     my $population = $worksheet->get_cell($i, 9)->unformatted();
-    # print "$population\n";
     
     $capitals{$index} = {
         'name'       => $capital,
